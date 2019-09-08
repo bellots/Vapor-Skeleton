@@ -1,0 +1,24 @@
+version: '3'
+services:
+  {{Skeleton | lowercase}}:
+    depends_on:
+      - postgres
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - DATABASE_HOST=localhost
+      - DATABASE_HOSTNAME=postgres
+      - DATABASE_PORT=5432
+      - SECRET=foo
+  postgres:
+    image: "postgres"
+    environment:
+      - POSTGRES_DB=yourdb
+      - POSTGRES_USER=yourUser
+      - POSTGRES_PASSWORD=yourPassword
+  start_dependencies:
+    image: dadarek/wait-for-dependencies
+    depends_on:
+      - postgres
+    command: postgres:5432

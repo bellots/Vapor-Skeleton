@@ -1,0 +1,19 @@
+{
+  "filesToRename" : [
+
+  ],
+  "remoteBones" : [
+      "git@github.com:bellots/Vapor-Bones.git@master"
+  ],
+  "environmentPlaceholders" : {
+
+  },
+  "foldersToRename" : [
+
+  ],
+  "filePlaceholder" : "VaporAPITemplate",
+  "scripts" : [
+
+  ],
+  "initGit" : true
+}
